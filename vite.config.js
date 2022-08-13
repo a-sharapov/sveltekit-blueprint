@@ -17,7 +17,11 @@ const config = {
 			svgoConfig: {},
 			requireSuffix: false
 		})
-	]
+	],
+	test: {
+    globals: true,
+    environment: "jsdom",
+  },
 };
 
 export default config;

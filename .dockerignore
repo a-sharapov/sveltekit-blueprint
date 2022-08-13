@@ -1,4 +1,7 @@
 .svelte-kit
+build
 node_modules
 package-lock.json
 README.md
+Dockerfile
+docker-compose.yml

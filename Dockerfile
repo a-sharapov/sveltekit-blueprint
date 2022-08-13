@@ -1,4 +1,5 @@
 FROM node:18-alpine
+ENV NODE_ENV development
 ENV APP_ROOT /usr/svelteapp
 RUN mkdir -p $APP_ROOT
 WORKDIR $APP_ROOT
@@ -7,5 +8,3 @@ RUN npm install && npm run check
 ADD . .
 RUN sleep 1
 RUN npm run build
-EXPOSE $VITE_APP_PORT
-#CMD ["npm", "run", "dev", "--", "--port", "$VITE_APP_PORT", "--host"]

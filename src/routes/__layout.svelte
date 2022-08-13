@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { browser, dev } from '$app/env'
+  import Toast from '$lib/components/Toast.svelte';
 
   let ReloadPrompt: any
   onMount(async () => {
@@ -14,6 +15,7 @@
   {/if}
 </svelte:head>
 
+<Toast />
 <slot />
 
 {#if ReloadPrompt}

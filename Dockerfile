@@ -3,8 +3,9 @@ ENV APP_ROOT /usr/svelteapp
 RUN mkdir -p $APP_ROOT
 WORKDIR $APP_ROOT
 ADD package.json .
-RUN npm install
-RUN sleep 3
+RUN npm install && npm run check
 ADD . .
+RUN sleep 1
+RUN npm run build
 EXPOSE $VITE_APP_PORT
 #CMD ["npm", "run", "dev", "--", "--port", "$VITE_APP_PORT", "--host"]

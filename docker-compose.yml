@@ -13,7 +13,7 @@ services:
     volumes:
       - ./src:/usr/svelteapp/src
       - ./static:/usr/svelteapp/static
-      - ./build:/usr/svelteapp/build
+      - ./package.json:/usr/svelteapp/package.json
     env_file:
      - .env
     environment:

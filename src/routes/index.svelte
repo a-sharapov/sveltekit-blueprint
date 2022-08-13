@@ -1,3 +1,11 @@
+<script lang="ts">
+
+</script>
+
+<svelte:head>
+  <title>Blueprint!</title>
+</svelte:head>
+
 <div class="preview-info">
   <img src="/icon-512x512.png" alt="React Blueprint" width="256px" class="title-image" />
   <h1>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700&subset=cyrillic,cyrillic-ext,latin-ext');
+
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+* .narrow {
+    font-family: 'PT Sans Narrow', sans-serif;
+}

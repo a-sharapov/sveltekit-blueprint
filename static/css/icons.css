@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+:root {
+	--icon-alert: url(../i/alert.svg);
+	--icon-checked: url(../i/checked.svg);
+	--icon-date: url(../i/date.svg);
+	--icon-expander: url(../i/expander.svg);
+	--icon-info: url(../i/info.svg);
+	--icon-round: url(../i/round.svg);
+	--icon-success: url(../i/success.svg);
+	--icon-paperclip: url(../i/paperclip.svg);
+	--icon-error: url(../i/error.svg);
+
+	--bg-noize: url(../i/noize.png);
+}

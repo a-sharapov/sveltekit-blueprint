@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+:root {
+	--color-danger: #eb3d26;
+	--color-alert: #f87e25;
+	--color-success: #4caf50;
+	--color-info: #368ace;
+
+	--color-danger-t: #eb3d2690;
+	--color-alert-t: #f87e2590;
+	--color-success-t: #4caf5090;
+	--color-info-t: #368ace90;
+
+	--base-white: #fefefe;
+
+	--text-main-color: #333;
+	--text-main-shadow-color: #ffffff80;
+
+	--link-color: #d60000;
+	--link-visited--color: #a10000;
+	--link-hover--color: #cf0000;
+}

@@ -1,0 +1,34 @@
+version: "3.0"
+
+networks:
+  svelte:
+    driver: bridge
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./src:/usr/svelteapp/src
+      - ./static:/usr/svelteapp/static
+      - ./build:/usr/svelteapp/build
+    env_file:
+     - .env
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      DANGEROUSLY_DISABLE_HOST_CHECK: "true"
+    ports:
+      - "${VITE_APP_PORT}:${VITE_APP_PORT}"
+    command: "npm run dev -- --port ${VITE_APP_PORT} --host"
+    stdin_open: true
+    restart: on-failure
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:${VITE_APP_PORT}" ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 1s
+    networks:
+      - svelte

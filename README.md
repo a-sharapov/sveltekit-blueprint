@@ -4,7 +4,7 @@
 
 # < Svektekit Blueprint 2022 />
 
-![TypeScript](https://img.shields.io/badge/TypeScript-222?style=for-the-badge&logo=typescript&logoColor=f7df1e) ![SVELTE](https://img.shields.io/badge/SvelteKit-222?style=for-the-badge&logo=Svelte&logoColor=ff380d) ![Vitest](https://img.shields.io/badge/Vitest-222?style=for-the-badge&logo=vite&logoColor=3578e5) ![WorkBox](https://img.shields.io/badge/WorkBox-222?style=for-the-badge&logo=pwa&logoColor=85bded)
+![TypeScript](https://img.shields.io/badge/TypeScript-222?style=for-the-badge&logo=typescript&logoColor=f7df1e) ![SVELTE](https://img.shields.io/badge/SvelteKit-222?style=for-the-badge&logo=Svelte&logoColor=ff380d) ![Vitest](https://img.shields.io/badge/Vitest-222?style=for-the-badge&logo=vite&logoColor=3578e5) ![WorkBox](https://img.shields.io/badge/WorkBox-222?style=for-the-badge&logo=pwa&logoColor=85bded) ![Pure.css](https://img.shields.io/badge/Pure.CSS-222?style=for-the-badge&logo=CSS3&logoColor=3294c8)
 
 </span>
 <span align="center">
@@ -16,43 +16,50 @@
 ## 👆 Особенности
 
 ##### 🧊 Cборка включает в себя:
+
 - TypeScript;
 - ESLint и Prettier;
 - Vite;
 - VitePWA (WorkBox);
 
 ##### 🗺️ Топология проекта:
-- *assets*: статические ресурсы, применяемые в компонентах
-- *components*: переиспольюзуемые компоненты приложения
-- *hooks*: вспомогательные функции для компонентов
-- *stores*: микроменеджеры состояний
-- *utils*: утилиты для работы с данными
+
+- _assets_: статические ресурсы, применяемые в компонентах
+- _components_: переиспольюзуемые компоненты приложения
+- _hooks_: вспомогательные функции для компонентов
+- _stores_: микроменеджеры состояний
+- _utils_: утилиты для работы с данными
 
 ### 🔌 Переменные окружения (.env)
-````
-Описаны в файле .env.example
-````
 
+```
+Описаны в файле .env.example
+```
 
 ### 📑 ESLint & Prettier
-````
+
+```
 npm run lint
-````
-````
+```
+
+```
 npm run format
-````
+```
 
 ## ⚙️ Запуск
 
-### Docker 
-✅ __(Рекомендуется)__
+### Docker
 
-````
+✅ **(Рекомендуется)**
+
+```
 docker-compose up --build
-````
+```
 
 ### В вашей системе
-⚠️ __(Не рекомендуется)__
-````
+
+⚠️ **(Не рекомендуется)**
+
+```
 npm run dev
-````
+```

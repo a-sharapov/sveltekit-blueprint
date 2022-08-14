@@ -1,3 +1,3 @@
-import { hideToast, showToast } from './useToast';
+import useToast from './useToast';
 
-export { hideToast, showToast };
+export { useToast };

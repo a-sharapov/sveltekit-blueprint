@@ -1,15 +1,19 @@
 <script lang="ts">
+  // <Toast delay={3000} />
   import { appToast } from '$lib/stores'
-  import { hideToast } from '$lib/hooks'
+  import { useToast } from '$lib/hooks'
+
+  const { hideToast } = useToast()
 
   let toastTimer: ReturnType<typeof setTimeout>
+  export let delay: number = 5000
 
   appToast.subscribe(({ visible }) => {
-    clearTimeout(toastTimer);
+    toastTimer && clearTimeout(toastTimer);
     if (visible) {
       toastTimer = setTimeout(() => {
         hideToast()
-      }, 5000);
+      }, delay);
     }
   })
 </script>

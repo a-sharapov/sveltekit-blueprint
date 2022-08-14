@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
-export interface IAuthStore {}
-export const authStore = writable<IAuthStore>(null);
+export interface IAuth {}
+export const Auth = writable<IAuth | null>(null);
 
 export interface IAppToast {
 	type: 'success' | 'error' | 'warning' | 'info';

@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { showToast } from '$lib/hooks'
+  import { useToast } from '$lib/hooks'
+  
+  const { showToast } = useToast()
 
-  const pClickHandler = (e: MouseEvent): void => {
+  const pClickHandler = (e: PointerEvent): void => {
     const traget = e.target as HTMLElement
     showToast(traget.innerText, "info")
   }
@@ -16,7 +18,7 @@
   <h1>
     {`< `}Sveltkit Blueprint 2022{` />`}
   </h1>
-  <p on:click={pClickHandler}>Dummy Sveltkit App with initial settings</p>
+  <p on:click={(e) => pClickHandler(e)}>Dummy Sveltkit App with initial settings</p>
 </div>
 
 <style>

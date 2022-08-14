@@ -4,8 +4,8 @@
 
 	const { showToast } = useToast();
 
-	const pClickHandler = (e: PointerEvent): void => {
-		const traget = e.target as HTMLElement;
+	const pClickHandler = (event: MouseEvent): void => {
+		const traget = event.target as HTMLElement;
 		showToast(traget.innerText, 'info');
 	};
 </script>
@@ -22,7 +22,7 @@
 	<h1>
 		{`< `}Sveltkit Blueprint 2022{` />`}
 	</h1>
-	<p on:click={(e) => pClickHandler(e)}>
+	<p on:click={pClickHandler}>
 		Dummy <SvelteLogo class="svelte-inline-logo" width="20px" /><strong>Sveltkit App</strong> with initial
 		settings
 	</p>

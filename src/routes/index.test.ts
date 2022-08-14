@@ -1,15 +1,18 @@
-import { it, expect } from 'vitest';
+import { it, expect, beforeEach, afterEach, describe } from 'vitest';
 import Index from './index.svelte';
-import { render, screen } from '@testing-library/svelte';
+import { cleanup, render, screen } from '@testing-library/svelte';
 
-it('should the given main layout', () => {
-	beforeEach(() => {
-		render(Index, { props: {} });
-	});
+describe('Test main page', () => {
+	it('should the given main layout', () => {
+		beforeEach(() => {
+			cleanup();
+			render(Index, { props: {} });
+		});
 
-	afterEach(() => {});
+		afterEach(() => {});
 
-	it('that the Todo is rendered', () => {
-		expect(screen.getByLabelText('Dummy Sveltkit App with initial settings')).toBeInTheDocument();
+		it('that the dummy content is rendered', () => {
+			expect(screen.getByLabelText('Dummy Sveltkit App with initial settings')).toBeInTheDocument();
+		});
 	});
 });

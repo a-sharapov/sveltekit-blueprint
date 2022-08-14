@@ -199,7 +199,6 @@ a.button {
 }
 
 .button,
-.input-file,
 button,
 input,
 select,
@@ -214,7 +213,7 @@ textarea {
 	box-shadow: 0 1px 0 var(--base-light-text-shadow);
 }
 
-.input-file,
+output,
 input[type='datetime-local'],
 input[type='file'],
 input[type='email'],
@@ -270,7 +269,6 @@ input[type='file']::file-selector-button:hover {
 	background: var(--base-darker);
 }
 
-.input-file,
 input[type='datetime-local'],
 input[type='email'],
 input[type='number'],
@@ -284,38 +282,56 @@ select:not([multiple]) {
 }
 
 input[type='range'] {
-	height: 5px;
+	height: 1rem;
 	border-radius: 0;
 	border: none;
+	box-shadow: none;
+	padding: 0.3em 2px;
 }
 
 input[type='range']:focus {
 	outline: 0;
 }
 
+input[type='range']:active {
+	background: radial-gradient(#00000010, transparent) center center;
+	background-size: cover;
+}
+
 input[type='range']::-webkit-slider-thumb {
 	appearance: none;
-	height: 20px;
-	width: 20px;
-	border-radius: 10px;
-	background: var(--base-dark);
+	height: 0.8em;
+	width: 0.8em;
+	border-radius: 50%;
+	background: var(--base-light);
 	cursor: pointer;
-	margin: -8px 0 0;
-	border: 1px solid var(--base-border);
+	margin: -0.3em 0;
+	align-self: center;
+	transition: 0.2s;
+	box-shadow: 0 1px 5px var(--base-dark-text-shadow);
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+	background: var(--base-dark);
+}
+
+input[type='range']::-webkit-slider-thumb:active {
+	width: 0.5em;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
 	appearance: none;
+	align-self: center;
 	width: 100%;
-	height: 5px;
-	border-radius: 0;
+	height: 100%;
+	border-radius: 2rem;
 	cursor: pointer;
 	background: var(--base-light);
-	border-bottom: 1px solid var(--base-border);
+	box-shadow: 0 1px 3px var(--base-dark-transparent);
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
-	background: var(--base-dark);
+	background: var(--base-light);
 }
 
 input[type='radio'] {
@@ -422,7 +438,6 @@ select:not([multiple]) > option:nth-child(even) {
 }
 
 .button,
-.input-file,
 button,
 button.btn input[type='button'],
 input[type='reset'],

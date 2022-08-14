@@ -19,9 +19,9 @@ const config = {
 		})
 	],
 	test: {
-    globals: true,
-    environment: "jsdom",
-  },
+		globals: true,
+		environment: 'jsdom'
+	}
 };
 
 export default config;

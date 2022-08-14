@@ -11,7 +11,15 @@
 	--color-success-t: #4caf5090;
 	--color-info-t: #368ace90;
 
-	--base-white: #fefefe;
+	--base-light: #fefefe;
+	--base-dark: #333;
+	--base-darker: #111;
+	--base-border: #777;
+	--base-dark-text-shadow: #00000050;
+	--base-light-text-shadow: #ffffff99;
+	--base-dark-box-shadow: #00000080;
+	--base-light-transparent: #fefefe20;
+	--base-dark-transparent: #33333320;
 
 	--text-main-color: #333;
 	--text-main-shadow-color: #ffffff80;

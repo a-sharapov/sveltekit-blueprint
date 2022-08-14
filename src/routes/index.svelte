@@ -1,5 +1,6 @@
 <script lang="ts">
   import { useToast } from '$lib/hooks'
+  import SvelteLogo from '$lib/assets/svelte.svg'
   
   const { showToast } = useToast()
 
@@ -14,16 +15,31 @@
 </svelte:head>
 
 <div class="preview-info">
-  <img src="/icon-512x512.png" alt="React Blueprint" width="256px" class="title-image" />
+  <div class="blueprint-bundle">
+    <img src="/icon-512x512.png" alt="React Blueprint" width="256px" class="title-image" />
+    <SvelteLogo width="50px" />
+  </div>
   <h1>
     {`< `}Sveltkit Blueprint 2022{` />`}
   </h1>
-  <p on:click={(e) => pClickHandler(e)}>Dummy Sveltkit App with initial settings</p>
+  <p on:click={(e) => pClickHandler(e)}>Dummy <SvelteLogo class="svelte-inline-logo" width="20px" /><strong>Sveltkit App</strong> with initial settings</p>
 </div>
 
 <style>
+  .blueprint-bundle {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 2rem;
+  }
+  :global(.blueprint-bundle > svg) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 2.5rem 2rem;
+  }
   .preview-info {
   display: flex;
+  font-size: 1.2em;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +60,10 @@
 
   img.title-image {
     height: auto;
-    margin: 0 auto 3rem;
+    margin: 0 auto;
+  }
+  :global(.svelte-inline-logo) {
+    vertical-align: middle;
+    margin: 0 0.5rem;
   }
 </style>

@@ -9,13 +9,13 @@
 }
 
 ::selection {
-	color: var(--base-white);
-	background: #777;
-	text-shadow: 0 1px 0 #00000050;
+	color: var(--base-light);
+	background: var(--base-border);
+	text-shadow: 0 1px 0 var(--base-dark-text-shadow);
 }
 
 html {
-	background: var(--base-white);
+	background: var(--base-light);
 	font-family: 'PT Sans', sans-serif;
 	overflow: hidden;
 }
@@ -120,7 +120,7 @@ ul li {
 }
 
 ul li::marker {
-	color: #777;
+	color: var(--base-border);
 	font-size: 80%;
 }
 
@@ -161,7 +161,7 @@ label:before {
 label[data-placeholder]:before {
 	content: attr(data-placeholder);
 	position: absolute;
-	color: #777;
+	color: var(--base-border);
 	opacity: 1;
 	pointer-events: none;
 	text-indent: 0.45rem;
@@ -174,11 +174,11 @@ label > svg {
 	width: 1.3rem;
 	height: 1.3rem;
 	transition: 0.4s;
-	filter: drop-shadow(0 1px 0 #ffffff99);
+	filter: drop-shadow(0 1px 0 var(--base-light-text-shadow));
 }
 
 label > svg * {
-	fill: #727272;
+	fill: var(--base-border);
 }
 
 label > svg + input {
@@ -206,12 +206,12 @@ select,
 textarea {
 	display: inline-block;
 	border: none;
-	border-bottom: 1px solid #777;
+	border-bottom: 1px solid var(--base-border);
 	background: none;
 	outline: 0;
 	border-radius: 0;
 	text-transform: uppercase;
-	box-shadow: 0 0.1em 0 #ffffff80;
+	box-shadow: 0 1px 0 var(--base-light-text-shadow);
 }
 
 .input-file,
@@ -226,6 +226,7 @@ input[type='text'],
 input[type='date'],
 select:not([multiple]),
 textarea {
+	background-color: var(--base-light);
 	padding: 0 0.15em;
 	line-height: 2em;
 	width: 100%;
@@ -257,16 +258,16 @@ input[type='file']::file-selector-button {
 	border-radius: 5px;
 	outline: none;
 	border: none;
-	background: #999;
-	color: #fff;
-	text-shadow: 0 1px 0 #00000070;
+	background: var(--base-dark);
+	color: var(--base-light);
+	text-shadow: 0 1px 0 var(--base-dark-text-shadow);
 	cursor: pointer;
 	transition: all 0.2s linear;
 	text-transform: uppercase;
 }
 
 input[type='file']::file-selector-button:hover {
-	background: #333;
+	background: var(--base-darker);
 }
 
 .input-file,
@@ -297,10 +298,10 @@ input[type='range']::-webkit-slider-thumb {
 	height: 20px;
 	width: 20px;
 	border-radius: 10px;
-	background: #222;
+	background: var(--base-dark);
 	cursor: pointer;
 	margin: -8px 0 0;
-	border: 1px solid #727272;
+	border: 1px solid var(--base-border);
 }
 
 input[type='range']::-webkit-slider-runnable-track {
@@ -309,12 +310,12 @@ input[type='range']::-webkit-slider-runnable-track {
 	height: 5px;
 	border-radius: 0;
 	cursor: pointer;
-	background: #dde7e7;
-	border-bottom: 1px solid #cbd4d4;
+	background: var(--base-light);
+	border-bottom: 1px solid var(--base-border);
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
-	background: #333;
+	background: var(--base-dark);
 }
 
 input[type='radio'] {
@@ -322,13 +323,13 @@ input[type='radio'] {
 	height: 20px;
 	vertical-align: middle;
 	margin: 0 7px 0 0;
-	border: 2px solid #848484;
+	border: 2px solid var(--base-border);
 	border-radius: 4px;
 	transition: border-color 0.2s linear;
 }
 
 input[type='radio']:hover {
-	border-color: #333;
+	border-color: var(--base-dark);
 }
 
 input[type='radio'] {
@@ -368,12 +369,12 @@ input[type='checkbox']:checked {
 }
 
 input[type='checkbox'].ambivalent {
-	background-color: #00000020;
+	background-color: var(--text-main-shadow-color);
 	background-image: var(--icon-round);
 	background-repeat: no-repeat;
 	background-position: -3px;
 	background-size: 24px;
-	border: 1px solid #777;
+	border: 1px solid var(--base-border);
 	width: 2.2rem;
 	border-radius: 20px;
 	opacity: 0.5;
@@ -417,7 +418,7 @@ select:not([multiple]) {
 }
 
 select:not([multiple]) > option:nth-child(even) {
-	background: #f2f5f5;
+	background: var(--base-light);
 }
 
 .button,
@@ -429,12 +430,12 @@ input[type='submit'] {
 	letter-spacing: 1px;
 	padding: 0 1.25em;
 	line-height: 2.7em;
-	background: #555;
-	color: #fff;
+	background: var(--base-border);
+	color: var(--base-light);
 	cursor: pointer;
 	white-space: nowrap;
 	transition: all 0.2s linear;
-	text-shadow: 0 1px 0 #00000030;
+	text-shadow: 0 1px 0 var(--base-dark-text-shadow);
 	border-radius: 0.3em;
 }
 
@@ -444,7 +445,7 @@ button:hover,
 input[type='button']:hover,
 input[type='reset']:hover,
 input[type='submit']:hover {
-	background: #333;
+	background: var(--base-dark);
 }
 
 .button:active,
@@ -453,7 +454,7 @@ button:active,
 input[type='button']:active,
 input[type='reset']:active,
 input[type='submit']:active {
-	background: #333;
+	background: var(--base-dark);
 }
 
 .button:disabled,
@@ -476,7 +477,7 @@ input[type='submit'] > svg {
 	height: 1.2rem;
 	vertical-align: middle;
 	margin: auto 0.7rem 0.2rem 0;
-	filter: drop-shadow(0 1px 3px #00000030);
+	filter: drop-shadow(0 1px 3px var(--base-dark-text-shadow));
 }
 
 .button > svg *,
@@ -484,12 +485,18 @@ button > svg *,
 input[type='button'] > svg *,
 input[type='reset'] > svg *,
 input[type='submit'] > svg * {
-	fill: #ddd;
+	fill: var(--base-light);
 }
 
 textarea {
 	resize: none;
-	background: linear-gradient(to bottom, transparent, transparent 38px, #111 39px, #fff 0px);
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		transparent 38px,
+		var(--base-border) 39px,
+		var(--base-light) 0px
+	);
 	background-size: 100% 40px;
 	line-height: 40px;
 	height: 120px;
@@ -501,7 +508,7 @@ textarea {
 input[type='date'] {
 	width: 100%;
 	overflow: hidden;
-	border: 1px solid #848484;
+	border: 1px solid var(--base-border);
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
@@ -527,9 +534,8 @@ input[type='date']::-webkit-datetime-edit-fields-wrapper {
 }
 
 *::placeholder {
-	font-family: 'PT Sans Narrow', sans-serif;
-	color: #555;
-	font-size: 110%;
+	font-family: inherit;
+	color: var(--base-border);
 }
 
 /* Tables */
@@ -544,13 +550,13 @@ table tr {
 }
 
 table tr:nth-child(even) {
-	background: rgba(242, 245, 245, 0.5);
+	background: var(--base-light-transparent);
 }
 
 table td {
 	margin: 0;
 	padding: 0.9em 0.7em;
-	border: 1px solid #dde7e7;
+	border: 1px solid var(--base-dark);
 }
 
 table tbody tr:first-child td {
@@ -560,11 +566,11 @@ table tbody tr:first-child td {
 table th {
 	padding: 0.7em;
 	font-weight: normal;
-	background: #f2f5f5;
-	border: 1px solid #dde7e7;
-	border-top: none;
-	border-bottom: none;
+	background: var(--base-light);
+	border: 1px solid var(--base-dark);
 	vertical-align: bottom;
+	color: var(--base-dark);
+	text-shadow: 0 1px 0 var(--base-light-text-shadow);
 }
 
 main {

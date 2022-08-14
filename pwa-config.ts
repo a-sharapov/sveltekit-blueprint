@@ -1,4 +1,7 @@
-export const pwaConfiguration = {
+import { VitePWAOptions } from 'vite-plugin-pwa';
+
+export const pwaConfiguration: VitePWAOptions = {
+	minify: true,
 	registerType: 'autoUpdate',
 	injectRegister: 'auto',
 	includeAssets: ['*.ico', '*.png', 'css/*.*', 'i/*.*'],

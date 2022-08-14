@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import svelteSVG from 'vite-plugin-svelte-svg';
 import { VitePWA } from 'vite-plugin-pwa';
-import { pwaConfiguration } from './pwa-config.js';
+import { pwaConfiguration } from './pwa-config';
 
 /** @type {import('vite').UserConfig} */
 const config = {

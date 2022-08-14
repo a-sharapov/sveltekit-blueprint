@@ -1,3 +1,1 @@
-<div class="reload">
-  Reloading...
-</div>
+<div class="reload">Reloading...</div>

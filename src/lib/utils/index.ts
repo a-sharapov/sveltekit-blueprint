@@ -2,9 +2,9 @@ import { VALIDATE_PATTERNS as patterns } from '$lib/constants';
 
 export const validateValue = (value: string, name: string): boolean => {
 	if (!!value && name in patterns && !patterns[name].test(value)) {
-		return true;
+		return false;
 	}
-	return false;
+	return true;
 };
 
 export const stringToHash = (string: string): number => {

@@ -4,7 +4,7 @@
 
 # < Svektekit Blueprint 2022 />
 
-![TypeScript](https://img.shields.io/badge/TypeScript-222?style=for-the-badge&logo=typescript&logoColor=f7df1e) ![SVELTE](https://img.shields.io/badge/SvelteKit-222?style=for-the-badge&logo=Svelte&logoColor=ff380d) ![Vitest](https://img.shields.io/badge/Vitest-222?style=for-the-badge&logo=vite&logoColor=3578e5) ![WorkBox](https://img.shields.io/badge/WorkBox-222?style=for-the-badge&logo=pwa&logoColor=85bded) ![Pure.css](https://img.shields.io/badge/Pure.CSS-222?style=for-the-badge&logo=CSS3&logoColor=3294c8)
+![TypeScript](https://img.shields.io/badge/TypeScript-222?style=for-the-badge&logo=typescript&logoColor=f7df1e) ![SVELTE](https://img.shields.io/badge/SvelteKit-222?style=for-the-badge&logo=Svelte&logoColor=ff380d) ![Vitest](https://img.shields.io/badge/Vitest-222?style=for-the-badge&logo=vite&logoColor=3578e5) ![WorkBox](https://img.shields.io/badge/WorkBox-222?style=for-the-badge&logo=pwa&logoColor=85bded)
 
 </span>
 <span align="center">
@@ -38,8 +38,9 @@
 
 ### 📑 ESLint & Prettier
 
-`npm run lint` - запуск _prettier_ совместно с eslint
-`npm run format` - запуск _prettier_ в режиме исправления
+- `npm run lint` - запуск _prettier_ совместно с eslint
+
+- `npm run format` - запуск _prettier_ в режиме исправления
 
 ## ⚙️ Запуск
 
@@ -53,5 +54,8 @@
 
 ## 🧪 Тестирование
 
-`npm run test` - запуск тестов в консоли в режиме реального времени
-`npm run coverage` - запуск отчета о покрытии кода
+Рекомендуется запуск в контейнере: `docker exec -it frontend `
+
+- `npm run test` - запуск тестов в консоли в режиме реального времени
+
+- `npm run coverage` - запуск отчета о покрытии кода

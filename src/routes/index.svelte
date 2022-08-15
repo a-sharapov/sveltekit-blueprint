@@ -34,7 +34,12 @@
 		width: fit-content;
 		margin-bottom: 2rem;
 	}
-	:global(.blueprint-bundle > svg) {
+	:global(.preview-info svg) {
+		vertical-align: middle;
+		margin: 0 0.5rem;
+		width: 20px;
+	}
+	:global(.blueprint-bundle > img + svg) {
 		position: absolute;
 		width: 50px;
 		top: 50%;
@@ -64,10 +69,5 @@
 	img.title-image {
 		height: auto;
 		margin: 0 auto;
-	}
-	:global(.preview-info svg) {
-		vertical-align: middle;
-		margin: 0 0.5rem;
-		width: 20px;
 	}
 </style>

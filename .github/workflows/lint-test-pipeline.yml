@@ -12,7 +12,7 @@ on:
       - master
 
 jobs:
-  app_lint_check:
+  check_lint_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,25 +24,13 @@ jobs:
       - name: Clone app
         uses: actions/checkout@v1
 
-      - name: Install Dependencies & Run ESLint and Prettier check
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run svelte check and lint
         run: |
-          npm install
+          npm run check
           npm run lint
 
-  app_tests_check:
-    runs-on: ubuntu-latest
-    needs: [app_lint_check]
-
-    steps:
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18.x'
-
-      - name: Clone app
-        uses: actions/checkout@v1
-
-      - name: Install Dependencies & Test app
-        run: |
-          npm install
-          npm run test
+      - name: Run svelte check and lint
+        run: npm run test

@@ -12,6 +12,7 @@ export const stringToHash = (string: string): number => {
 	let i: number;
 	let chr: number;
 
+	if (!string) return hash;
 	if (string.length === 0) return hash;
 
 	for (i = 0; i < string.length; i++) {

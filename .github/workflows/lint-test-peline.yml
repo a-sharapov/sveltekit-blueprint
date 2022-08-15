@@ -1,0 +1,51 @@
+name: app-lint-and-build-check
+
+env:
+  VITE_APP_PORT=5757
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      
+jobs:
+  app_lint_check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '18.x'
+
+    - name: Clone app
+      uses: actions/checkout@v1
+        
+    - name: Install Dependencies & Run ESLint and Prettier check
+      run: |
+        npm install
+        npm run check
+        npm run lint
+      
+  app_build_check:
+    runs-on: ubuntu-latest
+    needs: [app_lint_check]
+    env:
+      VITE_PWA_DEV_OPTIONS_ENABLED: false
+    
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '18.x'
+
+    - name: Clone app
+      uses: actions/checkout@v1
+        
+    - name: Install Dependencies & Test app
+      run: | 
+        npm install
+        npm run test

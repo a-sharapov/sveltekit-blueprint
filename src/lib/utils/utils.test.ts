@@ -30,16 +30,5 @@ describe('Test of app Utils', () => {
 			expect(test).toBeTypeOf('number');
 			expect(test).toBe(0);
 		});
-
-		it('should return 0 if nothing given', () => {
-			const test = stringToHash();
-			expect(test).toBeTypeOf('number');
-			expect(test).toBe(0);
-		});
-
-		it('should return number if given value had a wrong type', () => {
-			const test = stringToHash(false);
-			expect(test).toBeTypeOf('number');
-		});
 	});
 });

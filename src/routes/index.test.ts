@@ -1,4 +1,4 @@
-import { it, expect, beforeEach, afterEach, describe } from 'vitest';
+import { it, expect, beforeEach, describe } from 'vitest';
 import Index from './index.svelte';
 import { cleanup, render, screen } from '@testing-library/svelte';
 

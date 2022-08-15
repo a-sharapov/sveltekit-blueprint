@@ -17,14 +17,14 @@
 <div class="preview-info">
 	<div class="blueprint-bundle">
 		<img src="/icon-512x512.png" alt="React Blueprint" width="256px" class="title-image" />
-		<SvelteLogo width="50px" />
+		<!-- @ts-ignore -->
+		<SvelteLogo />
 	</div>
 	<h1>
 		{`< `}Sveltkit Blueprint 2022{` />`}
 	</h1>
 	<p on:click={pClickHandler}>
-		Dummy <SvelteLogo class="svelte-inline-logo" width="20px" /><strong>Sveltkit App</strong> with initial
-		settings
+		Dummy <SvelteLogo /><strong>Sveltkit App</strong> with initial settings
 	</p>
 </div>
 
@@ -36,6 +36,7 @@
 	}
 	:global(.blueprint-bundle > svg) {
 		position: absolute;
+		width: 50px;
 		top: 50%;
 		left: 50%;
 		margin: 2.5rem 2rem;
@@ -64,8 +65,9 @@
 		height: auto;
 		margin: 0 auto;
 	}
-	:global(.svelte-inline-logo) {
+	:global(.preview-info svg) {
 		vertical-align: middle;
 		margin: 0 0.5rem;
+		width: 20px;
 	}
 </style>

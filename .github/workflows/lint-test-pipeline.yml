@@ -1,7 +1,7 @@
 name: app-lint-and-build-check
 
 env:
-  VITE_APP_PORT=5757
+  VITE_APP_PORT: 5757
 
 on:
   push:
@@ -33,8 +33,6 @@ jobs:
   app_build_check:
     runs-on: ubuntu-latest
     needs: [app_lint_check]
-    env:
-      VITE_PWA_DEV_OPTIONS_ENABLED: false
     
     steps:
     - name: Setup Node

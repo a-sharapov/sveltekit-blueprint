@@ -1,6 +1,8 @@
 import { writable } from 'svelte/store';
 
-export interface IAuth {}
+export interface IAuth {
+	user: Array<any>;
+}
 export const Auth = writable<IAuth | null>(null);
 
 export interface IAppToast {

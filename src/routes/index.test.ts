@@ -9,7 +9,7 @@ describe('Test main page', () => {
 			render(Index, { props: {} });
 		});
 
-		afterEach(() => {});
+		// afterEach(() => {});
 
 		it('that the dummy content is rendered', () => {
 			expect(screen.getByLabelText('Dummy Sveltkit App with initial settings')).toBeInTheDocument();

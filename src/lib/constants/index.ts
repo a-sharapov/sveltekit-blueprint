@@ -12,6 +12,8 @@ export const ROBOTS_VARIANTS: IConstant = {
 interface IValidatePattern {
 	[key: string]: RegExp;
 }
+
+/* eslint-disable */
 export const VALIDATE_PATTERNS: IValidatePattern = {
 	username: /^[a-z0-9_-]{3,16}$/,
 	password:
@@ -21,3 +23,4 @@ export const VALIDATE_PATTERNS: IValidatePattern = {
 		/^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/,
 	email: /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/
 };
+/* eslint-enable */

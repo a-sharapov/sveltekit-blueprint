@@ -6,7 +6,7 @@
 	const { hideToast } = useToast();
 
 	let toastTimer: ReturnType<typeof setTimeout>;
-	export let delay: number = 5000;
+	export let delay = 5000;
 
 	appToast.subscribe(({ visible }) => {
 		toastTimer && clearTimeout(toastTimer);

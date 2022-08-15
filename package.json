@@ -12,7 +12,7 @@
 		"format": "prettier --write --plugin-search-dir=. .",
 		"test": "vitest",
 		"coverage": "vitest run --coverage",
-		"precommit": "npm run format && npm run test"
+		"precommit": "npm run format && git add -A ."
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",

@@ -11,8 +11,7 @@
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"test": "vitest",
-		"coverage": "vitest run --coverage",
-		"precommit": "npm run format && git add -A ."
+		"coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -36,10 +35,8 @@
 		"vite": "^3.0.0",
 		"vite-plugin-pwa": "^0.12.3",
 		"vite-plugin-svelte-svg": "^2.0.2",
-		"vitest": "^0.21.1",
-		"husky": "^8.0.1"
+		"vitest": "^0.21.1"
 	},
 	"type": "module",
-	"dependencies": {
-	}
+	"dependencies": {}
 }
